@@ -8,6 +8,8 @@ public class Clues_SO : ScriptableObject
     public string objectName;
     public int objectId;
     [TextArea(3, 10)]
-    public string dialogue;
-    
+    public string dialogueInitial;
+    [TextArea(3, 10)]
+    public string[] dialoguelater;
+    public int[] possibleSuspectId;
 }

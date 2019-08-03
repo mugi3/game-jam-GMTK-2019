@@ -7,5 +7,8 @@ public class Suspects_SO : ScriptableObject
     public string suspectName;
     public int suspectId;
     [TextArea(3,10)]
-    public string dialogue;
+    public string dialogueInitial;
+    [TextArea(3, 10)]
+    public string dialoguelater;
+    public int[] possibleCluesId;
 }
