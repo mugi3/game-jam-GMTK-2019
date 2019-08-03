@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu(fileName ="Clue",menuName ="Add New Info" , order = 1)]
+[CreateAssetMenu(fileName ="Clue",menuName ="Add New Clue" , order = 1)]
 [System.Serializable]
 public class Clues_SO : ScriptableObject
 {
