@@ -5,11 +5,6 @@ using UnityEngine;
 public class Movements : MonoBehaviour
 {
     public float speed = 2;
-    public GameObject mainCamera;
-    private void Start()
-    {
-        mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
-    }
     void Update()
     {
         float hori = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
