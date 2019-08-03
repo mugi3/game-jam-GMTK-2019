@@ -25,7 +25,7 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueBox.text = "";
         bool done = false;
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.5f);
         foreach (char letter in dialogueToDisplay.ToCharArray())
         {
             dialogueBox.text += letter;

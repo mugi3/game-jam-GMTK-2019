@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   suspectName: Blue lagoon
   suspectId: 202
-  dialogueInitial: 
-  dialoguelater: []
+  dialogueInitial: 'Yo Whatsup '
+  dialoguelater:
+  - Go away
+  - Stay away
   possibleCluesId: 

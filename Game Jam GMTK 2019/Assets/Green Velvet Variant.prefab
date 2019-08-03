@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 7337334386438210114, guid: b0586b29e73d3e9449a5c43cf1801b87,
         type: 3}
       propertyPath: m_Name
-      value: Green Velvet
+      value: Green Velvet Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7337334386438210118, guid: b0586b29e73d3e9449a5c43cf1801b87,
         type: 3}
@@ -82,5 +82,11 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7337334386438210115, guid: b0586b29e73d3e9449a5c43cf1801b87,
+        type: 3}
+      propertyPath: suspect
+      value: 
+      objectReference: {fileID: 11400000, guid: b0ab23f6e76b7bd45b49b3618f3c8c91,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0586b29e73d3e9449a5c43cf1801b87, type: 3}

@@ -15,5 +15,9 @@ MonoBehaviour:
   suspectName: Coffee Chai
   suspectId: 203
   dialogueInitial: zzzzzzzzzz
-  dialoguelater: []
+  dialoguelater:
+  - Its not me
+  - 'Trust me i am innocent
+
+'
   possibleCluesId: 

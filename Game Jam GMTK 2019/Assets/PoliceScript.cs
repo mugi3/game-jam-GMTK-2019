@@ -2,20 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Suspect_script : MonoBehaviour
+public class PoliceScript : MonoBehaviour
 {
-    public Suspects_SO suspect;
     public float distance;
     public bool iniDialgueDone = false;
     public bool can_interact = false;
     public GameObject player;
     public DialogueManager DM;
     public GameManager GM;
+    [TextArea(3,10)]
+    public string[] startingDialogue;
+    [TextArea(3, 10)]
+    public string endDialogue;
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         DM = GameObject.FindObjectOfType<DialogueManager>();
         GM = GameObject.FindObjectOfType<GameManager>();
+        StartCoroutine(StartGame());
     }
     private void Update()
     {
@@ -28,30 +33,28 @@ public class Suspect_script : MonoBehaviour
 
         if (can_interact && Input.GetKeyDown(KeyCode.E) && !GM.DialogueBoxIsOn)
         {
-            StartDialogue();
             GM.DialogueBoxIsOn = true;
+            GM.InitiateFinalPhase();
         }
-
     }
-    void StartDialogue()
+    IEnumerator StartGame()
     {
-        if (!iniDialgueDone)
+        int i = 0;
+        while (i<=startingDialogue.Length - 1)
         {
-            DM.DisplayDialogue(suspect.dialogueInitial);
-            iniDialgueDone = true;
+            bool done = false;
+            DM.DisplayDialogue(startingDialogue[i]);
+            i++;
+            while (!done)
+            {
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    done = true;
+                }
+                yield return null;
+            }
         }
-        else if (iniDialgueDone)
-        {
-            int i = Random.Range(0, suspect.dialoguelater.Length);
-            DM.DisplayDialogue(suspect.dialoguelater[i]);
-        }
+        GM.playerMovements.can_move = true;
+        yield return null;
     }
-    public void ClickedMe()
-    {
-        if (suspect.suspectId == GM.murderer.suspectId)
-            DM.DisplayDialogue("Your answer Was Correct. Congratulations");
-        else
-            DM.DisplayDialogue("Opps You got the wrong person. Murderer was " + GM.murderer.suspectName + "!");
-    }
-    
 }

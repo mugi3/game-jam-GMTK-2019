@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 7337334386438210114, guid: b0586b29e73d3e9449a5c43cf1801b87,
         type: 3}
       propertyPath: m_Name
-      value: Blue Valvet
+      value: Blue Valvet Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7337334386438210118, guid: b0586b29e73d3e9449a5c43cf1801b87,
         type: 3}
@@ -77,10 +77,11 @@ PrefabInstance:
       propertyPath: m_Color.g
       value: 0.13679248
       objectReference: {fileID: 0}
-    - target: {fileID: 7337334386438210113, guid: b0586b29e73d3e9449a5c43cf1801b87,
+    - target: {fileID: 7337334386438210115, guid: b0586b29e73d3e9449a5c43cf1801b87,
         type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: suspect
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f2b5a3c0cb19ca43a5c4decd8af41e7,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0586b29e73d3e9449a5c43cf1801b87, type: 3}
