@@ -8,7 +8,11 @@ public class DialogueManager : MonoBehaviour
 
     public Animator dialogboxAnimator;
     public Text dialogueBox;
-
+    GameManager GM;
+    private void Start()
+    {
+        GM = GameObject.FindObjectOfType<GameManager>();
+    }
 
     public void DisplayDialogue(string dialogue)
     {
@@ -41,5 +45,6 @@ public class DialogueManager : MonoBehaviour
     {
         StopAllCoroutines();
         dialogboxAnimator.SetTrigger("DBoxOut");
+        GM.DialogueBoxIsOn = false;
     }
 }

@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public List<Suspects_SO> Suspects;
     public Movements playerMovements;
     public DialogueManager DM;
+    public bool DialogueBoxIsOn = false;
     private void Start()
     {
         playerMovements = GameObject.FindObjectOfType<Movements>();

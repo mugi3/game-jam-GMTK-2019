@@ -10,10 +10,12 @@ public class ClueScript : MonoBehaviour
     public bool can_interact = false;
     public GameObject player;
     public DialogueManager DM;
+    public GameManager GM;
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         DM = GameObject.FindObjectOfType<DialogueManager>();
+        GM = GameObject.FindObjectOfType<GameManager>();
     }
     private void Update()
     {
@@ -24,9 +26,10 @@ public class ClueScript : MonoBehaviour
         }
         else can_interact = false;
 
-        if(can_interact && Input.GetKeyDown(KeyCode.E))
+        if (can_interact && Input.GetKeyDown(KeyCode.E) && !GM.DialogueBoxIsOn)
         {
             StartDialogue();
+            GM.DialogueBoxIsOn = true;
         }
 
     }
