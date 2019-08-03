@@ -44,6 +44,7 @@ public class PoliceScript : MonoBehaviour
         {
             bool done = false;
             DM.DisplayDialogue(startingDialogue[i]);
+            yield return new WaitForSeconds(1);
             i++;
             while (!done)
             {

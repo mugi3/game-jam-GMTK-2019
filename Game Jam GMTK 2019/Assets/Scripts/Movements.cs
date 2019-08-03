@@ -16,6 +16,11 @@ public class Movements : MonoBehaviour
     {
         MovePlayer();
     }
+    private void Update()
+    {
+        if (!can_move)
+            rb.velocity = Vector2.zero;
+    }
     void MovePlayer()
     {
         if (!can_move)
