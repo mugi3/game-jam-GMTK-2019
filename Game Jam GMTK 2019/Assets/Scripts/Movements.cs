@@ -17,7 +17,6 @@ public class Movements : MonoBehaviour
         float hori = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
         float verti = Input.GetAxis("Vertical") * speed * Time.deltaTime;
         Vector2 movements = new Vector2(hori,verti);
-        //transform.Translate(hori, verti, 0);
         rb.velocity = movements;
     }
 }
