@@ -9,6 +9,6 @@ public class Suspects_SO : ScriptableObject
     [TextArea(3,10)]
     public string dialogueInitial;
     [TextArea(3, 10)]
-    public string dialoguelater;
+    public string[] dialoguelater;
     public int[] possibleCluesId;
 }

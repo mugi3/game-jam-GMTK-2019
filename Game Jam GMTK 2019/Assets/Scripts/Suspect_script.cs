@@ -4,15 +4,46 @@ using UnityEngine;
 
 public class Suspect_script : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Suspects_SO suspect;
+    public float distance;
+    public bool iniDialgueDone = false;
+    public bool can_interact = false;
+    public GameObject player;
+    public DialogueManager DM;
+    public GameManager GM;
+    private void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player");
+        DM = GameObject.FindObjectOfType<DialogueManager>();
+        GM = GameObject.FindObjectOfType<GameManager>();
     }
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        distance = Vector2.Distance(transform.position, player.transform.position);
+        if (distance <= 1.2f)
+        {
+            can_interact = true;
+        }
+        else can_interact = false;
+
+        if (can_interact && Input.GetKeyDown(KeyCode.E) && !GM.DialogueBoxIsOn)
+        {
+            StartDialogue();
+            GM.DialogueBoxIsOn = true;
+        }
+
+    }
+    void StartDialogue()
+    {
+        if (!iniDialgueDone)
+        {
+            DM.DisplayDialogue(suspect.dialogueInitial);
+            iniDialgueDone = true;
+        }
+        else if (iniDialgueDone)
+        {
+            int i = Random.Range(0, suspect.dialoguelater.Length);
+            DM.DisplayDialogue(suspect.dialoguelater[i]);
+        }
     }
 }
