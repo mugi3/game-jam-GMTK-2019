@@ -56,5 +56,4 @@ public class ClueScript : MonoBehaviour
             DM.DisplayDialogue(clue.dialoguelater[i]);
         }
     }
-
 }
