@@ -31,10 +31,15 @@ public class Movements : MonoBehaviour
         float verti = Input.GetAxis("Vertical") * speed * Time.deltaTime;
         Vector2 movements = new Vector2(hori, verti);
         rb.velocity = movements;
+
         if (hori != 0 || verti != 0)
             playerAnimator.SetBool("Walking", true);
         else
             playerAnimator.SetBool("Walking", false);
+        if(verti > 0)
+            playerAnimator.SetBool("Forward", true);
+        else if( verti < 0 )
+            playerAnimator.SetBool("Walking", false);
+
     }
-    
 }
