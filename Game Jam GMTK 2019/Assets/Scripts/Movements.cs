@@ -8,6 +8,7 @@ public class Movements : MonoBehaviour
     Rigidbody2D rb;
     Animator playerAnimator;
     public bool can_move = true;
+    public AudioSource moveSound;
 
     private void Start()
     {
@@ -33,9 +34,15 @@ public class Movements : MonoBehaviour
         rb.velocity = movements;
 
         if (hori != 0 || verti != 0)
+        {
             playerAnimator.SetBool("Walking", true);
+            moveSound.Play();
+        }
         else
+        {
             playerAnimator.SetBool("Walking", false);
+            moveSound.Pause();
+        }
         if(verti > 0)
             playerAnimator.SetBool("Forward", true);
         else if( verti < 0 )
