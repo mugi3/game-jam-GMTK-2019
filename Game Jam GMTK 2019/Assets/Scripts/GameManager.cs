@@ -7,14 +7,20 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     #region Declaration
-    public SpawnPoint[] SpawnPoints;
-    public List<GameObject> Spawnables;
-    public List<GameObject> Spawns;
-    public List<Clues_SO> Clues;
+    [SerializeField]
+    SpawnPoint[] SpawnPoints;
+    [SerializeField]
+    List<GameObject> Spawnables;
+    [SerializeField]
+    List<GameObject> Spawns;
+    [SerializeField]
+    List<Clues_SO> Clues;
     public Suspects_SO murderer;
     public List<Suspects_SO> Suspects;
     public Movements playerMovements;
-    public DialogueManager DM;
+    DialogueManager DM;
+    [SerializeField]
+    Animator fade_in_screen;
 
     //Final Phase Declare
     public GameObject final_screen;
@@ -27,7 +33,7 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
-       
+        fade_in_screen.SetTrigger("FadeOut");
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         playerMovements = GameObject.FindObjectOfType<Movements>();

@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class PoliceScript : MonoBehaviour
 {
-    public float distance;
-    public bool iniDialgueDone = false;
-    public bool can_interact = false;
-    public GameObject player;
-    public DialogueManager DM;
-    public GameManager GM;
+    float distance;
+    bool can_interact = false;
+    GameObject player;
+    DialogueManager DM;
+    GameManager GM;
     [TextArea(3,10)]
-    public string[] startingDialogue;
-    [TextArea(3, 10)]
-    public string endDialogue;
+    [SerializeField]
+    string[] startingDialogue;
+    //[TextArea(3, 10)]
+    //[SerializeField]
+    //public string endDialogue;
 
     private void Start()
     {
