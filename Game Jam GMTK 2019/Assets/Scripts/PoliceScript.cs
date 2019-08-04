@@ -4,17 +4,15 @@ using UnityEngine;
 
 public class PoliceScript : MonoBehaviour
 {
-    float distance;
-    bool can_interact = false;
-    GameObject player;
-    DialogueManager DM;
-    GameManager GM;
+    public float distance;
+    public bool can_interact = false;
+    public GameObject player;
+    public DialogueManager DM;
+    public GameManager GM;
     [TextArea(3,10)]
-    [SerializeField]
-    string[] startingDialogue;
-    //[TextArea(3, 10)]
-    //[SerializeField]
-    //public string endDialogue;
+    public string[] startingDialogue;
+    [TextArea(3, 10)]
+    public string endDialogue;
 
     private void Start()
     {
@@ -45,7 +43,7 @@ public class PoliceScript : MonoBehaviour
         {
             bool done = false;
             DM.DisplayDialogue(startingDialogue[i]);
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(2);
             i++;
             while (!done)
             {

@@ -7,20 +7,18 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     #region Declaration
-    [SerializeField]
-    SpawnPoint[] SpawnPoints;
-    [SerializeField]
-    List<GameObject> Spawnables;
-    [SerializeField]
-    List<GameObject> Spawns;
-    [SerializeField]
-    List<Clues_SO> Clues;
+    public List<Clues_SO> clueInfoPanel;
+    public GameObject InfoPanel;
+    bool infoPanelIsActive = false;
+
+    public SpawnPoint[] SpawnPoints;
+    public List<GameObject> Spawnables;
+    public List<GameObject> Spawns;
+    public List<Clues_SO> Clues;
     public Suspects_SO murderer;
     public List<Suspects_SO> Suspects;
     public Movements playerMovements;
-    DialogueManager DM;
-    [SerializeField]
-    Animator fade_in_screen;
+    public DialogueManager DM;
 
     //Final Phase Declare
     public GameObject final_screen;
@@ -33,17 +31,28 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
-        fade_in_screen.SetTrigger("FadeOut");
+       
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         playerMovements = GameObject.FindObjectOfType<Movements>();
         playerMovements.can_move = false;
         DM = GameObject.FindObjectOfType<DialogueManager>();
         murderer = Suspects[Random.Range(0,Suspects.Count)];
-        Debug.Log(murderer.name);
-        Debug.Log(murderer.suspectName);
-        Debug.Log(murderer.suspectId);
         SpawnStuff();
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.I) && !infoPanelIsActive)
+        {
+            InfoPanel.SetActive(true);
+            infoPanelIsActive = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.I) && infoPanelIsActive)
+        {
+            InfoPanel.SetActive(false);
+            infoPanelIsActive = false;
+        }
+
     }
     #region Spawning
     public void SpawnStuff()
@@ -63,7 +72,6 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
-        Debug.Log(Spawns.Count);
     }
     #endregion
     public void InitiateFinalPhase()

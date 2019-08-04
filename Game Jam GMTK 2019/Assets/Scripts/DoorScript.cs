@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class DoorScript : MonoBehaviour
 {
-    [SerializeField]
-    Transform teleportTo;
-    GameObject player;
-    [SerializeField]
-    Animator fade_Screen;
+    public Transform teleportTo;
+    public GameObject player;
+    public Animator fade_Screen;
     GameManager GM;
-    bool can_teleport = false;
+    public bool can_teleport = false;
     private void Start()
     {
         GM = GameObject.FindObjectOfType<GameManager>();

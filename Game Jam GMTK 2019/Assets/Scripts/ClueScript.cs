@@ -5,12 +5,12 @@ using UnityEngine;
 public class ClueScript : MonoBehaviour
 {
     public Clues_SO clue;
-    float distance;
-    bool iniDialgueDone = false;
-    bool can_interact = false;
-    GameObject player;
-    DialogueManager DM;
-    GameManager GM;
+    public float distance;
+    public bool iniDialgueDone = false;
+    public bool can_interact = false;
+    public GameObject player;
+    public DialogueManager DM;
+    public GameManager GM;
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -39,6 +39,7 @@ public class ClueScript : MonoBehaviour
         {
             DM.DisplayDialogue(clue.dialogueInitial);
             iniDialgueDone = true;
+            GM.clueInfoPanel.Add(clue);
         }
         else if(iniDialgueDone)
         {

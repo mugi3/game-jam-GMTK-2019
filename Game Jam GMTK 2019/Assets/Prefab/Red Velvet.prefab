@@ -8,10 +8,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7337334386438210118}
+  - component: {fileID: 1577825099472773084}
   - component: {fileID: 7337334386438210113}
   - component: {fileID: 7337334386438210112}
   - component: {fileID: 7337334386438210115}
+  - component: {fileID: 2288830031623951513}
   m_Layer: 0
   m_Name: Red Velvet
   m_TagString: Untagged
@@ -19,20 +20,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7337334386438210118
-Transform:
+--- !u!224 &1577825099472773084
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7337334386438210114}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.61, y: 2.65, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 2.61, y: 2.65}
+  m_SizeDelta: {x: 1, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &7337334386438210113
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -126,3 +132,11 @@ MonoBehaviour:
   player: {fileID: 0}
   DM: {fileID: 0}
   GM: {fileID: 0}
+--- !u!222 &2288830031623951513
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7337334386438210114}
+  m_CullTransparentMesh: 0
