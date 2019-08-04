@@ -12,12 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4c5cba286435114e913a1269208fd39, type: 3}
   m_Name: Clue A
   m_EditorClassIdentifier: 
-  objectName: Knife
+  objectName: Poision
   objectId: 101
-  dialogueInitial: Hahahahah LoL he Killed Him With A knife xD. Where is the sword
-    lmao
-  dialoguelater:
-  - "Wow A knife\t"
-  - Hmm Knife
-  - A Knife Nothing Special
-  possibleSuspectId: 
+  dialogueInitial: 
+  dialoguelater: []

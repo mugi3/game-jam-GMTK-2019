@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a018470bf8cef14c902e4596be576cb, type: 3}
-  m_Name: Suspect C
+  m_Name: Suspect F
   m_EditorClassIdentifier: 
-  suspectName: Mr. Emerald
-  suspectId: 203
+  suspectName: Black Butler
+  suspectId: 206
   dialogueInitial: 
   dialoguelater: []
-  possibleCluesId: 670000006800000069000000
+  possibleCluesId: 6a0000006b00000065000000

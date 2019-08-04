@@ -37,9 +37,18 @@ public class ClueScript : MonoBehaviour
     {
         if (!iniDialgueDone)
         {
-            DM.DisplayDialogue(clue.dialogueInitial);
-            iniDialgueDone = true;
-            GM.clueInfoPanel.Add(clue);
+            if (clue.activeName == null)
+            {
+                DM.DisplayDialogue(clue.dialogueInitial);
+                iniDialgueDone = true;
+                GM.clueInfoPanel.Add(clue);
+            }
+            else
+            {
+                DM.DisplayDialogue(clue.dialogueInitialActive);
+                iniDialgueDone = true;
+                GM.clueInfoPanel.Add(clue);
+            }
         }
         else if(iniDialgueDone)
         {

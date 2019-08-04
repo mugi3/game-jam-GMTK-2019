@@ -12,11 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4c5cba286435114e913a1269208fd39, type: 3}
   m_Name: Clue B
   m_EditorClassIdentifier: 
-  objectName: Sword
+  objectName: Perfume
   objectId: 102
-  dialogueInitial: Hmm okay here is the sowrd LOL Okay
-  dialoguelater:
-  - "Sword\t"
-  - Excalibur
-  - Rusty
-  possibleSuspectId: 
+  dialogueInitial: 
+  dialoguelater: []

@@ -12,10 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a018470bf8cef14c902e4596be576cb, type: 3}
   m_Name: Suspect A
   m_EditorClassIdentifier: 
-  suspectName: Red velvet
+  suspectName: Mr. White Hat
   suspectId: 201
-  dialogueInitial: Hello watashino namaewa Red velvet da, yoroshikun
-  dialoguelater:
-  - what something?
-  - Hii again
-  possibleCluesId: 
+  dialogueInitial: 
+  dialoguelater: []
+  possibleCluesId: 650000006600000067000000

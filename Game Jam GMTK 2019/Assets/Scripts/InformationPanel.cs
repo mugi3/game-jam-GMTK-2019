@@ -18,7 +18,6 @@ public class InformationPanel : MonoBehaviour
     }
     private void OnEnable()
     {
-        Debug.Log(InfoList.Count);
         UpdateUI();
         
     }
@@ -37,7 +36,12 @@ public class InformationPanel : MonoBehaviour
         {
             Text temp;
             temp = Instantiate(preb, parent);
-            temp.text = clues.objectName;
+            if (clues.activeName == null)
+            {
+                temp.text = clues.objectName;
+            }
+            else
+                temp.text = clues.activeName;
             infolistGameObjects.Add(temp.gameObject);
         }
     }
@@ -51,8 +55,6 @@ public class InformationPanel : MonoBehaviour
             Destroy(infogameob);
         }
         infolistGameObjects.Clear();
-        Debug.Log(InfoList.Count);
-        Debug.Log("List Cleared");
 
     }
 

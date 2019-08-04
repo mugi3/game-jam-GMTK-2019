@@ -12,10 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a018470bf8cef14c902e4596be576cb, type: 3}
   m_Name: Suspect B
   m_EditorClassIdentifier: 
-  suspectName: Blue lagoon
+  suspectName: Miss Violet
   suspectId: 202
-  dialogueInitial: 'Yo Whatsup '
-  dialoguelater:
-  - Go away
-  - Stay away
-  possibleCluesId: 
+  dialogueInitial: 
+  dialoguelater: []
+  possibleCluesId: 660000006700000068000000

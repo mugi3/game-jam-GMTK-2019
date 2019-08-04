@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public List<GameObject> Spawnables;
     public List<GameObject> Spawns;
     public List<Clues_SO> Clues;
+    public int[] possibleClues;
     public Suspects_SO murderer;
     public List<Suspects_SO> Suspects;
     public Movements playerMovements;
@@ -31,14 +32,25 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
-       
+        foreach (Clues_SO clue in Clues)
+        {
+            clue.activeName = null;
+        }
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         playerMovements = GameObject.FindObjectOfType<Movements>();
         playerMovements.can_move = false;
         DM = GameObject.FindObjectOfType<DialogueManager>();
-        murderer = Suspects[Random.Range(0,Suspects.Count)];
-        SpawnStuff();
+        AssignMurderer();
+        Debug.Log(murderer.suspectName);
+        foreach (Clues_SO clue in Clues)
+        {
+            Debug.Log(clue.objectName);
+        }
+
+        //SpawnStuff();
+
+
     }
     private void Update()
     {
@@ -63,9 +75,9 @@ public class GameManager : MonoBehaviour
             while (!done)
             {
                 int i = Random.Range(0, SpawnPoints.Length - 1);
-                if(SpawnPoints[i].vacant)
+                if (SpawnPoints[i].vacant)
                 {
-                    GameObject go = Instantiate(spawnable, SpawnPoints[i].gameObject.transform.position,Quaternion.identity);
+                    GameObject go = Instantiate(spawnable, SpawnPoints[i].gameObject.transform.position, Quaternion.identity);
                     Spawns.Add(go);
                     SpawnPoints[i].vacant = false;
                     done = true;
@@ -81,4 +93,96 @@ public class GameManager : MonoBehaviour
         Cursor.visible = true;
         final_screen.SetActive(true);
     }
+    #region Assigning The Murderer and Clues
+    public void AssignMurderer()
+    {
+        murderer = Suspects[Random.Range(0, Suspects.Count)];
+
+        for (int i = 0; i < 3; i++)
+        {
+            possibleClues[i] = murderer.possibleCluesId[i];
+            switch(possibleClues[i])
+            {
+                case 101:
+                    {
+                        foreach(Clues_SO clue in Clues)
+                        {
+                            if(clue.objectId == 101)
+                            {
+                                clue.activeName = "Empty Poison container";
+                            }
+                        }
+                        break;
+                    }
+                case 102:
+                    {
+                        foreach (Clues_SO clue in Clues)
+                        {
+                            if (clue.objectId == 102)
+                            {
+                                clue.activeName = "Perfume with Blood on it";
+                            }
+                        }
+                        break;
+                    }
+                case 103:
+                    {
+                        foreach (Clues_SO clue in Clues)
+                        {
+                            if (clue.objectId == 103)
+                            {
+                                clue.activeName = "Empty Wine Glass with Blood on it";
+                            }
+                        }
+                        break;
+                    }
+                case 104:
+                    {
+                        foreach (Clues_SO clue in Clues)
+                        {
+                            if (clue.objectId == 104)
+                            {
+                                clue.activeName = "Recently used Rope";
+                            }
+                        }
+                        break;
+                    }
+                case 105:
+                    {
+                        foreach (Clues_SO clue in Clues)
+                        {
+                            if (clue.objectId == 105)
+                            {
+                                clue.activeName = "Knife with blood on it";
+                            }
+                        }
+                        break;
+                    }
+                case 106:
+                    {
+                        foreach (Clues_SO clue in Clues)
+                        {
+                            if (clue.objectId == 106)
+                            {
+                                clue.activeName = "Mr. Sunflower's Coat with Blood on it";
+                            }
+                        }
+                        break;
+                    }
+                case 107:
+                    {
+                        foreach (Clues_SO clue in Clues)
+                        {
+                            if (clue.objectId == 107)
+                            {
+                                clue.activeName = "Red Wine Bottle with stench of poison";
+                            }
+                        }
+                        break;
+                    }
+            }
+        }
+        
+    }
+    #endregion
 }
