@@ -6,11 +6,13 @@ public class Movements : MonoBehaviour
 {
     public float speed = 2;
     Rigidbody2D rb;
+    Animator playerAnimator;
     public bool can_move = true;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        playerAnimator = GetComponent<Animator>();
     }
     void FixedUpdate()
     {
@@ -29,5 +31,10 @@ public class Movements : MonoBehaviour
         float verti = Input.GetAxis("Vertical") * speed * Time.deltaTime;
         Vector2 movements = new Vector2(hori, verti);
         rb.velocity = movements;
+        if (hori != 0 || verti != 0)
+            playerAnimator.SetBool("Walking", true);
+        else
+            playerAnimator.SetBool("Walking", false);
     }
+    
 }
