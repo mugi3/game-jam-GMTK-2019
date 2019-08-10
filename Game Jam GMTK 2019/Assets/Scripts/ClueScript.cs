@@ -20,7 +20,7 @@ public class ClueScript : MonoBehaviour
     private void Update()
     {
         distance = Vector2.Distance(transform.position, player.transform.position);
-        if (distance <= 1.2f)
+        if (distance <= 0.6f)
         {
             can_interact = true;
         }
