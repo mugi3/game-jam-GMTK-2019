@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: Clue D
   m_EditorClassIdentifier: 
   objectName: Rope
+  activeName: 
   objectId: 104
-  dialogueInitial: 
-  dialoguelater: []
+  dialogueInitial: Looks like rope for household uses.
+  dialogueInitialActive: 'This rope is untangled and looks like it was used recently. '
+  dialoguelater:
+  - A rope for the swing they were talking about.

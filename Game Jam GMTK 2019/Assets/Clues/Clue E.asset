@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: Clue E
   m_EditorClassIdentifier: 
   objectName: Knife
+  activeName: 
   objectId: 105
-  dialogueInitial: 
-  dialoguelater: []
+  dialogueInitial: A normal kitchen knife.
+  dialogueInitialActive: blood on a kitchen knife. Very Unsual.
+  dialoguelater:
+  - Kitchen knife.

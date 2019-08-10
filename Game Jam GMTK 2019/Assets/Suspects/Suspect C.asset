@@ -9,11 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a018470bf8cef14c902e4596be576cb, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ba2bc5f06e6c974997f36782d66025b, type: 3}
   m_Name: Suspect C
   m_EditorClassIdentifier: 
   suspectName: Mr. Emerald
   suspectId: 203
-  dialogueInitial: 
-  dialoguelater: []
+  dialogueInitial: People here call me Mr. Emerald. I got this name because of my
+    obsession with green things. There can be only ONE culprit.
+  dialoguelater:
+  - would you like to have a GLASS OF WINE with me?
+  - Miss violet asked me to make a swing with the ROPE she bought.
+  - Its hard to find KNIFE in the kitchen in this mansion.
   possibleCluesId: 670000006800000069000000

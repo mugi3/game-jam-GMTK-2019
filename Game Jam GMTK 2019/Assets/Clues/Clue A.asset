@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: Clue A
   m_EditorClassIdentifier: 
   objectName: Poision
+  activeName: Empty Poison container
   objectId: 101
-  dialogueInitial: 
-  dialoguelater: []
+  dialogueInitial: What is Poison doing in this house?
+  dialogueInitialActive: Looks like this poison was used recently.
+  dialoguelater:
+  - Interesting.

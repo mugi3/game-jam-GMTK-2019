@@ -13,6 +13,11 @@ MonoBehaviour:
   m_Name: Clue B
   m_EditorClassIdentifier: 
   objectName: Perfume
+  activeName: Perfume with Blood on it
   objectId: 102
-  dialogueInitial: 
-  dialoguelater: []
+  dialogueInitial: looks like a perfume used by both gents and ladies.
+  dialogueInitialActive: This perfume has a little blood stain on it.
+  dialoguelater:
+  - 'This perfume smells nice
+
+'

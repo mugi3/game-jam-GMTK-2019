@@ -52,6 +52,17 @@ public class Suspect_script : MonoBehaviour
             DM.DisplayDialogue("Your answer Was Correct. Congratulations");
         else
             DM.DisplayDialogue("Opps You got the wrong person. Murderer was " + GM.murderer.suspectName + "!");
+
+
+        StartCoroutine(EndGame());
     }
-    
+
+    IEnumerator EndGame()
+    {
+        yield return new WaitForSeconds(2);
+        Time.timeScale = 0;
+        yield return new WaitForSeconds(2);
+        Application.Quit();
+    }
+
 }

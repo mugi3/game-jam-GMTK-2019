@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: Clue C
   m_EditorClassIdentifier: 
   objectName: Empty Wine Glass
+  activeName: 
   objectId: 103
-  dialogueInitial: 
-  dialoguelater: []
+  dialogueInitial: A glass used for serving wine.
+  dialogueInitialActive: Hmmm blood stains on wine glass.
+  dialoguelater:
+  - People really love wine here.

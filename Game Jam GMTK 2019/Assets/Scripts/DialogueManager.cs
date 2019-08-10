@@ -7,6 +7,7 @@ public class DialogueManager : MonoBehaviour
 {
 
     public Animator dialogboxAnimator;
+    public AudioSource pickItem;
     public Text dialogueBox;
     GameManager GM;
     private void Start()
@@ -16,7 +17,7 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayDialogue(string dialogue)
     {
-        
+        pickItem.Play();
         dialogboxAnimator.SetTrigger("DBoxIn");
         StopAllCoroutines();
         StartCoroutine(TypeDialogue(dialogue));
