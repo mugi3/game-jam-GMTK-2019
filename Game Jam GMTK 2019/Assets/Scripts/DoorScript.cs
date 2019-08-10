@@ -15,14 +15,15 @@ public class DoorScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        can_teleport = true;
+        //can_teleport = true; 
+        StartCoroutine(TeleportPlayer());
     }
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E) && can_teleport)
-        {
-            StartCoroutine(TeleportPlayer());
-        }
+        //if(Input.GetKeyDown(KeyCode.E) && can_teleport)
+        //{
+        //    StartCoroutine(TeleportPlayer());
+        //}
     }
     IEnumerator TeleportPlayer()
     {
@@ -34,8 +35,8 @@ public class DoorScript : MonoBehaviour
         yield return new WaitForSeconds(.6f);
         GM.playerMovements.can_move = true;
     }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        can_teleport = false;
-    }
+    //private void OnTriggerExit2D(Collider2D collision)
+    //{
+    //    can_teleport = false;
+    //}
 }

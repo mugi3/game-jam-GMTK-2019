@@ -6,6 +6,7 @@ public class Suspect_script : MonoBehaviour
 {
     public Suspects_SO suspect;
     public float distance;
+
     public bool iniDialgueDone = false;
     public bool can_interact = false;
     public GameObject player;
@@ -20,7 +21,7 @@ public class Suspect_script : MonoBehaviour
     private void Update()
     {
         distance = Vector2.Distance(transform.position, player.transform.position);
-        if (distance <= 1.2f)
+        if (distance <= 0.6f)
         {
             can_interact = true;
         }
@@ -52,6 +53,14 @@ public class Suspect_script : MonoBehaviour
             DM.DisplayDialogue("Your answer Was Correct. Congratulations");
         else
             DM.DisplayDialogue("Opps You got the wrong person. Murderer was " + GM.murderer.suspectName + "!");
+        StartCoroutine(EndGame());
+    }
+    IEnumerator EndGame()
+    {
+        yield return new WaitForSeconds(2);
+        Time.timeScale = 0;
+        yield return new WaitForSeconds(2);
+        Application.Quit();
     }
     
 }
