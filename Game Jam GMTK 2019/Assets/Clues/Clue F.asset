@@ -13,9 +13,6 @@ MonoBehaviour:
   m_Name: Clue F
   m_EditorClassIdentifier: 
   objectName: Mr. Sunflower's Coat
-  activeName: 
   objectId: 106
-  dialogueInitial: Looks like MR. Sunflower's coat/
-  dialogueInitialActive: Caot with blood stained.
-  dialoguelater:
-  - Mr. sunflower's Coat.
+  dialogueInitial: 
+  dialoguelater: []

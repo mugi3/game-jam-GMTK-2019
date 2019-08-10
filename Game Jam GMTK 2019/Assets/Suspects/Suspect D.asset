@@ -9,15 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ba2bc5f06e6c974997f36782d66025b, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a018470bf8cef14c902e4596be576cb, type: 3}
   m_Name: Suspect D
   m_EditorClassIdentifier: 
   suspectName: Mrs. Sunflower
   suspectId: 204
-  dialogueInitial: (Mrs. Sunflower is sobbing, she cleans her eyes before speaking)
-    I don't have any words for this deed. What can ONE gain by doing such things?
-  dialoguelater:
-  - I guess we all bought some ROPE to fulfil Mr. SUnflower's wish.
-  - I used to give him fruits and i used to forget the KNIFE in his room.
-  - His COAT will be the last mememto.
+  dialogueInitial: 
+  dialoguelater: []
   possibleCluesId: 68000000690000006a000000

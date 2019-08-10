@@ -33,7 +33,6 @@ public class PoliceScript : MonoBehaviour
         if (can_interact && Input.GetKeyDown(KeyCode.E) && !GM.DialogueBoxIsOn)
         {
             GM.DialogueBoxIsOn = true;
-            DM.DisplayDialogue(endDialogue);
             GM.InitiateFinalPhase();
         }
     }
@@ -44,7 +43,7 @@ public class PoliceScript : MonoBehaviour
         {
             bool done = false;
             DM.DisplayDialogue(startingDialogue[i]);
-            yield return new WaitForSeconds(3.8f);
+            yield return new WaitForSeconds(2);
             i++;
             while (!done)
             {

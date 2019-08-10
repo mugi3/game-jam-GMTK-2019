@@ -9,16 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ba2bc5f06e6c974997f36782d66025b, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a018470bf8cef14c902e4596be576cb, type: 3}
   m_Name: Suspect G
   m_EditorClassIdentifier: 
   suspectName: Miss Rose
   suspectId: 207
-  dialogueInitial: (looks like miss rose is in huge trauma but she tries to speak)
-    I...I...I..can't.....(she starts crying loudly)
-  dialoguelater:
-  - This rats won't let a single soul mour in peace. I hope butler uses the POISON
-    soon.
-  - Mr. sunflower also like that PERFUME.
-  - I saw many WINE BOTTLES in kitchen yesterday.
+  dialogueInitial: 
+  dialoguelater: []
   possibleCluesId: 65000000660000006b000000

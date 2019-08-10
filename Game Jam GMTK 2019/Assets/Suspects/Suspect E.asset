@@ -9,16 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ba2bc5f06e6c974997f36782d66025b, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a018470bf8cef14c902e4596be576cb, type: 3}
   m_Name: Suspect E
   m_EditorClassIdentifier: 
   suspectName: Chef Red
   suspectId: 205
-  dialogueInitial: 'they call me Chef Red because i have Red hair and Of course because
-    i like Red chillies haha. No matter how much i try i can''t make this enviroment
-    light with my jokes. '
-  dialoguelater:
-  - People here are expert in losing KNIVES.
-  - Ah Mrs Sunflower really want to keep the COAT to herself.
-  - We are always out of wine. I bought some WINE BOTTLES yesterday.
+  dialogueInitial: 
+  dialoguelater: []
   possibleCluesId: 690000006a0000006b000000

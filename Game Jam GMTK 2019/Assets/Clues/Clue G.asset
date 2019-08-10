@@ -13,9 +13,6 @@ MonoBehaviour:
   m_Name: Clue G
   m_EditorClassIdentifier: 
   objectName: Red Wine Bottle
-  activeName: Red Wine Bottle with stench of poison
   objectId: 107
-  dialogueInitial: A wine bottle.
-  dialogueInitialActive: This was used recently and smells of poison.
-  dialoguelater:
-  - A wine bottle.
+  dialogueInitial: 
+  dialoguelater: []

@@ -33,24 +33,13 @@ public class Movements : MonoBehaviour
         rb.velocity = movements;
 
         if (hori != 0 || verti != 0)
-        {
             playerAnimator.SetBool("Walking", true);
-            moveSound.Play();
-        }
         else
-        {
             playerAnimator.SetBool("Walking", false);
-            moveSound.Stop();
-        }
         if(verti > 0)
             playerAnimator.SetBool("Forward", true);
         else if( verti < 0 )
             playerAnimator.SetBool("Walking", false);
 
     }
-
-    public AudioSource moveSound;
-    
-
-
 }

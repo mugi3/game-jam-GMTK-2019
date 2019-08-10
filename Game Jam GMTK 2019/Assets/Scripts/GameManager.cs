@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
             Debug.Log(clue.objectName);
         }
 
-        SpawnStuff();
+        //SpawnStuff();
 
 
     }
